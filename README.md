@@ -20,7 +20,6 @@ Users can:
 
 ### Links
 
-- [Live site](https://meligavincent.github.io/product-list-with-cart-main/)
 - [Source code](https://github.com/meligavincent/product-list-with-cart-main)
 - [Frontend Mentor challenge](https://www.frontendmentor.io/challenges/product-list-with-cart-5MmqLVAp_d)
 
