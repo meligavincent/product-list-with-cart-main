@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "Red Hat Text";
+  src: url("/assets/fonts/RedHatText-VariableFont_wght.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+:root {
+  font-family:
+    "Red Hat Text",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: #260f08;
+  background: #fcf8f6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background: #fcf8f6;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+@import "tailwindcss";
+
+@font-face { font-family: "Red Hat Text"; src: url("../assets/fonts/RedHatText-VariableFont_wght.ttf") format("truetype"); font-weight: 400 700; font-display: swap; }
+@theme { --color-red: hsl(14 86% 42%); --color-green: hsl(159 69% 38%); --color-rose-50: hsl(20 50% 98%); --color-rose-100: hsl(13 31% 94%); --color-rose-300: hsl(14 25% 72%); --color-rose-400: hsl(7 20% 60%); --color-rose-500: hsl(12 20% 44%); --color-rose-900: hsl(14 65% 9%); --font-sans: "Red Hat Text", sans-serif; }
+@layer base { * { box-sizing: border-box; } body { min-width: 320px; margin: 0; background: var(--color-rose-50); color: var(--color-rose-900); font-family: var(--font-sans); } button { cursor: pointer; } button:focus-visible, a:focus-visible { outline: 3px solid var(--color-rose-900); outline-offset: 3px; } a { color: var(--color-red); } }
+@layer components {
+  .add-button, .quantity-control { position: absolute; bottom: 0; left: 50%; display: flex; width: 10rem; height: 2.75rem; transform: translate(-50%, 50%); align-items: center; justify-content: center; gap: .5rem; border-radius: 999px; font-size: .875rem; font-weight: 600; }
+  .add-button { border: 1px solid var(--color-rose-400); background: white; } .add-button:hover { border-color: var(--color-red); color: var(--color-red); }
+  .quantity-control { justify-content: space-between; padding: 0 .75rem; background: var(--color-red); color: white; }
+  .quantity-control button { display: grid; width: 1.125rem; height: 1.125rem; place-items: center; border: 1px solid white; border-radius: 999px; } .quantity-control button:hover { background: white; } .quantity-control button:hover img { filter: brightness(0) saturate(100%) invert(27%) sepia(93%) saturate(1904%) hue-rotate(353deg) brightness(91%) contrast(94%); }
+  .remove-button { display: grid; width: 1.125rem; height: 1.125rem; place-items: center; border: 1px solid var(--color-rose-400); border-radius: 999px; color: var(--color-rose-400); font-weight: 700; line-height: .75; } .remove-button:hover { border-color: var(--color-rose-900); color: var(--color-rose-900); }
+  .primary-button { width: 100%; border-radius: 999px; background: var(--color-red); padding: .875rem 1.5rem; color: white; font-weight: 600; } .primary-button:hover { background: hsl(14 86% 32%); }
+  .modal { width: 100%; max-width: 592px; max-height: 90vh; margin: auto; border: 0; padding: 0; background: transparent; overflow: visible; } .modal::backdrop { background: rgb(0 0 0 / .5); } .modal-card { max-height: 90vh; overflow-y: auto; border-radius: .75rem; background: white; padding: 2.5rem; }
+}
+@media (max-width: 639px) { .modal { max-height: calc(100vh - 5rem); margin: 5rem 0 0; } .modal-card { max-height: calc(100vh - 5rem); border-radius: .75rem .75rem 0 0; padding: 2.5rem 1.5rem 1.5rem; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
